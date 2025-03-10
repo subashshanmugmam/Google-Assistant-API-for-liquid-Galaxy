@@ -1,4 +1,14 @@
-// load env vars
+// No selection was provided, so I'll generate a code snippet that can be inserted at the cursor position.
+// This snippet includes a function to handle errors and a function to send a response to the user.
+
+function handleError(conv, error) {
+  console.error(error);
+  conv.ask('An error occurred. Please try again.');
+}
+
+function sendResponse(conv, response) {
+  conv.ask(response);
+}// load env vars
 require('dotenv').config()
 var fs = require('fs')
 const Client = require('ssh2').Client
